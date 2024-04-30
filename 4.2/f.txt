@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class P{
+    public:
+     float c;
+     float f;
+     float k;
+};
+
+class Q:public P
+{
+    public:
+        void toFehrenheit()
+        {
+            cout<<"enter degree:";
+            cin>>c;
+
+            f=c*(9/5)+32;
+
+            cout<<"fehrenhit :"<<f<<endl;
+        }
+};
+
+class R:public Q
+{
+    public:
+        void toKelvin()
+        {
+            k=(f-32)* 5 / 9 + 273.15;
+
+            cout<<"kelvin is:"<<k<<endl;
+        }
+};
+
+
+int main()
+{
+
+    R r1;
+    r1. toFehrenheit();
+    r1.toKelvin(); 
+    
+    return 0;
+}

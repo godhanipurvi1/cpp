@@ -1,0 +1,43 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+class x{
+    public:
+    int a;
+    int b;
+    int c;
+};
+
+class y:public x
+{
+    public:
+    void setdata()
+    {
+        cout<<"enter three number:";
+        cin>>a>>b>>c;
+    }
+    void getdata()
+    {
+        int cube,cube2,cube3,sum;
+        cube=a*a*a;
+        cube2=b*b*b;
+        cube3=c*c*c;
+
+        sum=cube+cube2+cube3;
+
+        cout<<"sum of three number:"<<sum;
+
+    }
+};
+int  main()
+{
+
+    y y1;
+    y1.setdata();
+    y1.getdata();
+    
+    return 0;
+
+}
