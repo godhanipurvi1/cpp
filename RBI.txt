@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+class RBI
+{
+    public:
+        double rate=6;
+            void getROI()
+        {
+            cout<<"rate of intrest is :\t"<<rate<<endl;
+        }
+};
+
+class SBI:public RBI
+{
+    public:
+    void getROI()
+        {
+            cout<<"intrest :\t"<<rate+0.5<<endl;
+        }
+
+};
+class BOB:public RBI
+{
+    public:
+        void getROI()
+        {
+            cout<<"intrest :\t"<<rate+1<<endl;
+        }
+};
+
+class ICIC: public RBI
+{
+    public:
+        void getROI()
+        {
+            cout<<"intrest :\t"<<rate+1.5<<endl;
+        }
+
+};
+
+int main()
+{
+    SBI A;
+    BOB B;
+    ICIC C;
+
+    A.getROI();
+    B.getROI();
+    C.getROI();
+
+    return 0;
+}
