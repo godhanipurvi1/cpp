@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class Distance 
+{
+    public:
+    int km;
+    int meter;
+public:
+    void setdata()
+    {
+        cout<<"enter km:";
+        cin>>km;
+        cout<<"enter meter:";
+        cin>>meter;
+    }
+    void getdata()
+    {
+        cout<<"km:"<<km<<endl
+        <<"meter:"<<meter<<endl;
+    }
+    Distance operator+(Distance d2)
+    {
+        Distance d3;
+        d3.km=km+d2.km;
+        d3.meter=meter+d2.meter;
+        return d3;
+    }
+};
+int main()
+{
+    Distance d1,d2,d3;
+    d1.setdata();
+    d2.setdata();
+    d3=d1+d2;
+    d3.getdata();
+    return 0;
+    
+}

@@ -1,0 +1,34 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class message
+{
+    protected:
+    string msg;
+    
+    
+    public:
+    void print()
+    {
+        msg="hello ,world!";
+        cout<<msg<<endl;
+    }
+    void print(string msg1)
+    {
+        cout<<msg<<" "<<msg1<<endl;
+    }
+};
+int main()
+{
+    message m1;
+    m1.print();
+    
+    message m2;
+    m2.print();
+    
+    m1.print("from earth!");
+    m2.print("frome moon!");
+    
+    return 0;
+}
